@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Resume / CV Maker</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #FAF6F2;
+      color: #683B2B;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav.scrolled {
+      background: #FAF6F2;
+      box-shadow: 0 6px 20px rgba(104, 59, 43, 0.2);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #B08440;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #683B2B;
+      font-size: 15px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    /* HOVER EFFECT */
+    .nav-links a:hover {
+      background: #D49E8D;
+      color: #FAF6F2;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(
+        135deg,
+        #DED1BD,
+        #FAF6F2
+      );
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 16px;
+      color: #683B2B;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #683B2B;
+    }
+
+    .btn {
+      margin-top: 28px;
+      display: inline-block;
+      padding: 14px 36px;
+      background: #B08440;
+      color: #FAF6F2;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #683B2B;
+      color: #FAF6F2;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(176, 132, 64, 0.35);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 110px 20px;
+      text-align: center;
+      background: #FAF6F2;
+    }
+
+    section:nth-child(even) {
+      background: #DED1BD;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 14px;
+      color: #B08440;
+      font-weight: 700;
+    }
+
+    section p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #683B2B;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 24px;
+      text-align: center;
+      font-size: 14px;
+      background: #683B2B;
+      color: #FAF6F2;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav {
+        padding: 14px 24px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .nav-links {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="logo">CV Maker</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#templates">Templates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero" id="home">
+    <div>
+      <h1>Digital Resume / CV Maker</h1>
+      <p>
+        Create a modern, elegant, and professional digital resume.
+        Showcase your skills and experience with confidence.
+      </p>
+      <a href="#features" class="btn">Create Resume</a>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <h2>Features</h2>
+    <p>
+      Easily build resumes with structured sections like education,
+      experience, skills, and projects.
+    </p>
+  </section>
+
+  <!-- TEMPLATES -->
+  <section id="templates">
+    <h2>Templates</h2>
+    <p>
+      Choose from minimal and professional resume templates
+      designed for modern job applications.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Developed as part of SkillCraft Technology Web Development Internship – Task 01.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Digital Resume / CV Maker
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
+
